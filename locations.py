@@ -1,3 +1,4 @@
+sat_cat = 1
 locations = [
         {
             'name': 'corvallis',
@@ -5,7 +6,7 @@ locations = [
             'long': 123.2620,
             'alt' : 0,
             'radius': 90,
-            'sat_cat': 0
+            'sat_cat': sat_cat
         },
             {
             'name': 'kathmandu',
@@ -13,7 +14,7 @@ locations = [
             'long': 85.3222,
             'alt' : 0,
             'radius': 90,
-            'sat_cat': 0
+            'sat_cat': sat_cat
         },
         {
             'name': 'london',
@@ -21,7 +22,7 @@ locations = [
             'long': 0.1276,
             'alt' : 0,
             'radius': 90,
-            'sat_cat': 0
+            'sat_cat': sat_cat
         },
         {
             'name': 'sydney',
@@ -29,7 +30,7 @@ locations = [
             'long': 151.2093,
             'alt' : 0,
             'radius': 90,
-            'sat_cat': 0
+            'sat_cat': sat_cat
         },
         {
             'name': 'cairo',
@@ -37,7 +38,7 @@ locations = [
             'long': 31.2357,
             'alt' : 0,
             'radius': 90,
-            'sat_cat': 0
+            'sat_cat': sat_cat
         },
         {
             'name': 'seoul',
@@ -45,6 +46,6 @@ locations = [
             'long': 126.9971,
             'alt' : 0,
             'radius': 90,
-            'sat_cat': 0
+            'sat_cat': sat_cat
         },
     ]
