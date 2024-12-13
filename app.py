@@ -4,7 +4,7 @@ from parse_api_responses import combine_sat_lat_long
 
 spreadsheet_id = '1TUBDCIEyPqv8Hfx6pARoGfH_csbCR0Gk0ZIqLa4IpzA'
 
-if __name__=='__main__':
+def main():
     google_sheet = GSheet(spreadsheet_id)
     meta_info_df, sat_info_df = api_caller()
     meta_sheet_range = 'meta_info'
@@ -17,3 +17,6 @@ if __name__=='__main__':
     google_sheet.update_sheets_with_data(meta_sheet_range, meta_info_df)
     google_sheet.update_sheets_with_data(sat_sheet_range, sat_info_df)
 
+
+if __name__=='__main__':
+    main()

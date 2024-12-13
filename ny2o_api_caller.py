@@ -8,9 +8,9 @@ def api_caller():
     with open('keys/ny2o_key.txt', 'r') as file:
         ny2o_api_key = file.read().strip()
 
-    meta_info_columns = ['location', 'category', 'transactionscount', 'satcount']
+    meta_info_columns = ['seen_from', 'category', 'transactionscount', 'satcount']
     meta_info_df = pd.DataFrame(columns=meta_info_columns)
-    sat_info_columns = ['location', 'satid', 'satname', 'launchDate', 'satlat', 'satlng', 'satalt']
+    sat_info_columns = ['seen_from', 'satid', 'satname', 'launchDate', 'satlat', 'satlng', 'satalt']
     sat_info_df = pd.DataFrame(columns=sat_info_columns)
 
     for location in locations:
@@ -30,8 +30,8 @@ def api_caller():
             content = response.json()
             loc_info_df = pd.DataFrame([content['info']])
             loc_sat_df = pd.DataFrame(content['above'])
-            loc_info_df['location'] = name
-            loc_sat_df['location'] = name
+            loc_info_df['seen_from'] = name
+            loc_sat_df['seen_from'] = name
             meta_info_df = pd.concat([meta_info_df,loc_info_df ], ignore_index=True)
             sat_info_df = pd.concat([sat_info_df, loc_sat_df], ignore_index=True)
             print(f"Fetched data successfully for {name}")
